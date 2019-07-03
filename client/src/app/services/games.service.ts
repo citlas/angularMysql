@@ -16,18 +16,18 @@ API_URI= 'http://localhost:3000/api/games';
    }
 
    getGame(id: string){
-    return this.http.get(`${this.API_URI}/games/${id}`)
+    return this.http.get(`${this.API_URI}/${id}`)
   }
 
   saveGame(game: Game){
-    return this.http.post(`${this.API_URI}/games`, game)
+    return this.http.post(`${this.API_URI}`, game)
   }
 
   deleteGame(id: string){
-    return this.http.delete(`${this.API_URI}/games/${id}`)
+    return this.http.delete(`${this.API_URI}/${id}`)
   }
 
   updateGame(id: string, updatedGame: Game):Observable<Game>{
-    return this.http.put(`${this.API_URI}/games/${id}`,updatedGame)
+    return this.http.put(`${this.API_URI}/${id}`,updatedGame)
   }
 }
