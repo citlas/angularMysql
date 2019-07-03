@@ -7,7 +7,7 @@
         <img [src]="game.image" class="card-img-top">
         <div class="card-body">
             <p>{{game.description}}</p>
-            <a href="" class="bt btn-info btn-block">EDIT GAME</a>
+            <a [routerLink]="['/games/edit', game.id]" class="bt btn-info btn-block" >EDIT GAME</a>
         </div>
     </div>
 </div>

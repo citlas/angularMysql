@@ -27,7 +27,7 @@ API_URI= 'http://localhost:3000/api/games';
     return this.http.delete(`${this.API_URI}/${id}`)
   }
 
-  updateGame(id: string, updatedGame: Game):Observable<Game>{
+  updateGame(id: string|number, updatedGame: Game):Observable<Game>{
     return this.http.put(`${this.API_URI}/${id}`,updatedGame)
   }
 }
